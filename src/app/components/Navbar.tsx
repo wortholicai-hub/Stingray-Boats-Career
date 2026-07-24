@@ -84,16 +84,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <div className="bg-white rounded-md px-3 py-1.5">
-              <Image
-                src="/logo/stingray-logo.jpg"
-                alt="Stingray Boats"
-                width={160}
-                height={24}
-                className="!h-5 md:!h-6 !w-auto"
-                priority
-              />
-            </div>
+            <Image
+              src="/logo/stingray-logo.png"
+              alt="Stingray Boats"
+              width={280}
+              height={42}
+              className="!h-10 md:!h-12 !w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Menu */}

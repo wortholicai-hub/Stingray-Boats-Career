@@ -65,15 +65,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Logo + Tagline */}
           <div>
-            <div className="bg-white rounded-md px-3 py-2 inline-block mb-4">
-              <Image
-                src="/logo/stingray-logo.jpg"
-                alt="Stingray Boats"
-                width={180}
-                height={27}
-                className="!h-6 !w-auto"
-              />
-            </div>
+            <Image
+              src="/logo/stingray-logo.png"
+              alt="Stingray Boats"
+              width={280}
+              height={42}
+              className="!h-12 !w-auto mb-4"
+            />
             <p className="text-[#C5CCD5]/60 text-sm leading-relaxed">
               Legendary Performance, Unsurpassed Since 1979.
             </p>
