@@ -14,7 +14,9 @@
   --color-sky: #6FAEDF;
   --color-silver: #C5CCD5;
   --color-silver-light: #e8ebef;
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-exo), Arial, Helvetica, sans-serif;
+  --font-heading: var(--font-exo2), Arial Black, sans-serif;
+  --font-button: var(--font-barlow), Arial, sans-serif;
 }
 
 html {
@@ -24,7 +26,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-exo), Arial, Helvetica, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -42,4 +44,73 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #18344C;
+}
+
+/* Water wave horizontal drift */
+.wave-layer-1 {
+  animation: waveFlow 10s linear infinite;
+}
+.wave-layer-2 {
+  animation: waveFlow 15s linear infinite reverse;
+}
+.wave-layer-3 {
+  animation: waveFlow 20s linear infinite;
+}
+.wave-layer-4 {
+  animation: waveFlow 25s linear infinite reverse;
+}
+
+@keyframes waveFlow {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Water wave vertical float (pure CSS, WordPress-portable) */
+.wave-float-1 {
+  animation: waveFloat1 6s ease-in-out infinite;
+}
+.wave-float-2 {
+  animation: waveFloat2 8s ease-in-out infinite;
+}
+.wave-float-3 {
+  animation: waveFloat3 10s ease-in-out infinite;
+}
+.wave-float-4 {
+  animation: waveFloat4 12s ease-in-out infinite;
+}
+
+@keyframes waveFloat1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes waveFloat2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+@keyframes waveFloat3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes waveFloat4 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Hide scrollbar on modals */
+.modal-scroll::-webkit-scrollbar {
+  display: none;
+}
+.modal-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Page loader spinner */
+.loader-spin {
+  animation: loaderSpin 1.2s linear infinite;
+}
+
+@keyframes loaderSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

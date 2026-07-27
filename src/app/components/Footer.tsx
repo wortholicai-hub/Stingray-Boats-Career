@@ -59,9 +59,10 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#18344C] text-white">
+    <footer className="text-white relative" style={{ backgroundImage: "url('/header-footer-img/footer-background.jpg.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <div className="absolute inset-0 bg-[#18344C]/50" />
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="relative max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Logo + Tagline */}
           <div>
@@ -72,7 +73,7 @@ export default function Footer() {
               height={42}
               className="!h-12 !w-auto mb-4"
             />
-            <p className="text-[#C5CCD5]/60 text-sm leading-relaxed">
+            <p className="text-white text-sm leading-relaxed">
               Legendary Performance, Unsurpassed Since 1979.
             </p>
           </div>
@@ -80,8 +81,8 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3
-              className="text-white font-bold text-sm tracking-[0.15em] uppercase mb-4 pb-3 border-b border-[#6FAEDF]/20"
-              style={{ fontFamily: "Arial Black, Arial, sans-serif" }}
+              className="text-white font-bold text-sm tracking-[0.15em] uppercase mb-4 pb-3 border-b border-white/20"
+              style={{ fontFamily: "var(--font-exo2), Arial Black, sans-serif" }}
             >
               Quick Links
             </h3>
@@ -91,14 +92,14 @@ export default function Footer() {
                   {link.href.startsWith("/") ? (
                     <Link
                       href={link.href}
-                      className="text-[#C5CCD5]/70 hover:text-[#6FAEDF] text-sm transition-colors"
+                      className="text-white/80 hover:text-white text-sm transition-colors"
                     >
                       {link.label}
                     </Link>
                   ) : (
                     <a
                       href={link.href}
-                      className="text-[#C5CCD5]/70 hover:text-[#6FAEDF] text-sm transition-colors"
+                      className="text-white/80 hover:text-white text-sm transition-colors"
                     >
                       {link.label}
                     </a>
@@ -111,53 +112,28 @@ export default function Footer() {
           {/* Contact Us */}
           <div>
             <h3
-              className="text-white font-bold text-sm tracking-[0.15em] uppercase mb-4 pb-3 border-b border-[#6FAEDF]/20"
-              style={{ fontFamily: "Arial Black, Arial, sans-serif" }}
+              className="text-white font-bold text-sm tracking-[0.15em] uppercase mb-4 pb-3 border-b border-white/20"
+              style={{ fontFamily: "var(--font-exo2), Arial Black, sans-serif" }}
             >
               Contact Us
             </h3>
             <div className="space-y-3">
               <a
                 href="tel:8433834507"
-                className="flex items-center gap-3 text-[#C5CCD5]/70 hover:text-[#6FAEDF] text-sm transition-colors"
+                className="flex items-center gap-3 text-white/80 hover:text-white text-sm transition-colors"
               >
-                <svg
-                  className="w-4 h-4 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                (843) 383-4507
+                (843) 383 4507
               </a>
               <a
                 href="#"
-                className="flex items-start gap-3 text-[#C5CCD5]/70 hover:text-[#6FAEDF] text-sm transition-colors"
+                className="flex items-start gap-3 text-white/80 hover:text-white text-sm transition-colors"
               >
-                <svg
-                  className="w-4 h-4 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
+                <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <span>
                   625 Railroad Ave.
@@ -167,20 +143,10 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:info@stingrayboats.com"
-                className="flex items-center gap-3 text-[#C5CCD5]/70 hover:text-[#6FAEDF] text-sm transition-colors"
+                className="flex items-center gap-3 text-white/80 hover:text-white text-sm transition-colors"
               >
-                <svg
-                  className="w-4 h-4 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 info@stingrayboats.com
               </a>
@@ -194,7 +160,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-[#C5CCD5]/70 hover:bg-[#6FAEDF] hover:text-white transition-all"
+                    className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#18344C] transition-all"
                   >
                     {social.icon}
                   </a>
@@ -206,9 +172,9 @@ export default function Footer() {
       </div>
 
       {/* Accessibility Statement */}
-      <div className="border-t border-white/10">
+      <div className="relative border-t border-white/15">
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <p className="text-[#C5CCD5]/40 text-xs leading-relaxed mb-4">
+          <p className="text-white/70 text-xs leading-relaxed mb-4 text-center">
             Stingray&apos;s goal is to permit customers to successfully gather
             information and conduct business through our website, including
             individuals with visual impairments that use screen readers to view
@@ -217,7 +183,7 @@ export default function Footer() {
             features or functions on this website, email us at{" "}
             <a
               href="mailto:info@stingrayboats.com"
-              className="text-[#6FAEDF]/60 hover:text-[#6FAEDF]"
+              className="text-white underline hover:text-white/90"
             >
               info@stingrayboats.com
             </a>{" "}
@@ -225,13 +191,13 @@ export default function Footer() {
             call our customer service line at{" "}
             <a
               href="tel:8433834507"
-              className="text-[#6FAEDF]/60 hover:text-[#6FAEDF]"
+              className="text-white underline hover:text-white/90"
             >
-              (843) 383-4507
+              (843) 383 4507
             </a>
             .
           </p>
-          <p className="text-[#C5CCD5]/50 text-xs text-center">
+          <p className="text-white/80 text-xs text-center">
             &copy; 2026 Stingray Boats. All Rights Reserved.
           </p>
         </div>

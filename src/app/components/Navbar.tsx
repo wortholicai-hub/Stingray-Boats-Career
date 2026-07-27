@@ -78,9 +78,11 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 w-full z-50 bg-[#18344C]/95 backdrop-blur-md border-b border-white/5"
+      className="fixed top-0 w-full z-50 border-b border-white/5"
+      style={{ backgroundImage: "url('/header-footer-img/header-background.jpg.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="absolute inset-0 bg-[#18344C]/40" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -126,6 +128,7 @@ export default function Navbar() {
                   <a
                     href={item.href}
                     className="px-3 py-2 text-[13px] font-semibold text-white/80 hover:text-white tracking-wide uppercase transition-colors"
+                    style={{ fontFamily: "var(--font-exo2), Arial, sans-serif" }}
                   >
                     {item.label}
                   </a>
@@ -155,12 +158,6 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <Link
-              href="/"
-              className="ml-2 px-4 py-2 text-[13px] font-bold text-[#18344C] bg-[#6FAEDF] rounded-lg hover:bg-white tracking-wide uppercase transition-colors"
-            >
-              Careers
-            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -204,7 +201,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#18344C] border-t border-white/10 px-4 pb-4">
+        <div className="lg:hidden relative bg-[#18344C]/95 backdrop-blur-sm border-t border-white/10 px-4 pb-4">
           {menuItems.map((item) => (
             <div key={item.label}>
               {item.children ? (
@@ -256,12 +253,6 @@ export default function Navbar() {
               )}
             </div>
           ))}
-          <Link
-            href="/"
-            className="block mt-2 text-center py-3 text-sm font-bold text-[#18344C] bg-[#6FAEDF] rounded-lg uppercase tracking-wide"
-          >
-            Careers
-          </Link>
         </div>
       )}
     </nav>
