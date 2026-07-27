@@ -43,6 +43,8 @@ export default function OpeningsPage() {
   const [showQuickApply, setShowQuickApply] = useState(false);
   const [quickApplyView, setQuickApplyView] = useState<"apply" | "signin" | "create">("apply");
   const [smsConsent, setSmsConsent] = useState<string>("");
+  const [showTalentModal, setShowTalentModal] = useState(false);
+  const [talentView, setTalentView] = useState<"create" | "signin">("create");
 
   const workEnvRef = useRef<HTMLDivElement>(null);
   const hotJobRef = useRef<HTMLDivElement>(null);
@@ -239,6 +241,25 @@ export default function OpeningsPage() {
         </div>
       </motion.div>
 
+      {/* Talent Community Panel - below search bar */}
+      <div className="max-w-7xl mx-auto px-6 w-full mt-4 relative z-20">
+        <div className="rounded-xl p-4 flex items-center gap-3" style={{ background: "linear-gradient(135deg, #18344C 0%, #004D6D 100%)" }}>
+          <svg className="w-5 h-5 text-[#6FAEDF] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p className="text-sm text-white/85">
+            Can&apos;t find what you&apos;re looking for?{" "}
+            <button
+              onClick={() => { setShowTalentModal(true); setTalentView("create"); }}
+              className="text-[#6FAEDF] font-semibold hover:text-white transition-colors cursor-pointer underline"
+            >
+              Join our Talent Community
+            </button>{" "}
+            to stay updated on career opportunities.
+          </p>
+        </div>
+      </div>
+
       {/* Welcome Banner with Create Job Alerts */}
       <div className="max-w-7xl mx-auto px-6 w-full mt-6 relative z-20">
         <motion.div
@@ -295,9 +316,6 @@ export default function OpeningsPage() {
                         <span className="text-sm">{job.company} | {job.location}</span>
                       </div>
                     </div>
-                    <button onClick={() => { setShowQuickApply(true); setQuickApplyView("apply"); }} className="bg-[#6FAEDF] text-[#18344C] font-bold px-8 py-3.5 rounded-lg hover:bg-white transition-colors text-sm tracking-wide cursor-pointer shadow-lg whitespace-nowrap" style={{ fontFamily: buttonFont }}>
-                      Quick Apply
-                    </button>
                   </div>
                 </div>
 
@@ -353,17 +371,11 @@ export default function OpeningsPage() {
           </motion.div>
         ) : viewMode === "positions" ? (
           <motion.div key="positions" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center mb-4">
               <p className="text-sm font-semibold text-[#18344C]">
                 <span className="text-[#004D6D] text-xl font-black mr-1">{jobs.length}</span>
                 Result{jobs.length !== 1 ? "s" : ""}
               </p>
-              <div className="flex items-center gap-2 text-sm text-[#18344C]/60">
-                <span>Show:</span>
-                <select className="border border-[#C5CCD5] rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-[#6FAEDF] bg-white text-[#18344C] cursor-pointer">
-                  <option>10</option><option>25</option><option>50</option>
-                </select>
-              </div>
             </div>
             <div className="space-y-4">
               {jobs.map((job, index) => (
@@ -389,7 +401,15 @@ export default function OpeningsPage() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 text-center text-sm text-[#18344C]/40">{jobs.length} Result{jobs.length !== 1 ? "s" : ""}</div>
+            <div className="mt-6 flex items-center justify-between">
+              <div className="text-sm text-[#18344C]/40">{jobs.length} Result{jobs.length !== 1 ? "s" : ""}</div>
+              <div className="flex items-center gap-2 text-sm text-[#18344C]/60">
+                <span>Show:</span>
+                <select className="border border-[#C5CCD5] rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-[#6FAEDF] bg-white text-[#18344C] cursor-pointer">
+                  <option>10</option><option>25</option><option>50</option>
+                </select>
+              </div>
+            </div>
           </motion.div>
         ) : (
           <motion.div key="locations" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
@@ -497,7 +517,7 @@ export default function OpeningsPage() {
                       <input type="password" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
                     </div>
                   </div>
-                  <p className="text-sm text-[#18344C]/50 mt-5">
+                  <p className="text-sm text-[#18344C]/50 mt-5 text-center">
                     Already have an account?{" "}
                     <button onClick={() => setModalView("signin")} className="text-[#6FAEDF] font-semibold hover:text-[#004D6D] transition-colors cursor-pointer">
                       Sign In
@@ -697,6 +717,99 @@ export default function OpeningsPage() {
                   <div className="flex items-center justify-between mt-6 pt-5 border-t border-[#C5CCD5]/30">
                     <button onClick={() => setQuickApplyView("apply")} className="px-6 py-2.5 text-sm font-semibold text-[#18344C]/60 hover:text-[#18344C] rounded-lg hover:bg-[#f5f6f8] transition-all cursor-pointer" style={{ fontFamily: buttonFont }}>Cancel</button>
                     <button className="px-6 py-2.5 text-sm font-semibold bg-[#004D6D] text-white rounded-lg hover:bg-[#18344C] transition-colors cursor-pointer shadow-md" style={{ fontFamily: buttonFont }}>Next</button>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Talent Community Modal */}
+      {showTalentModal && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/50" onClick={() => { setShowTalentModal(false); setTalentView("create"); }} />
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto modal-scroll">
+            <div className="p-6 md:p-8">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-xl font-black text-[#18344C] uppercase tracking-tight" style={{ fontFamily: headingFont }}>
+                  {talentView === "create" ? "Join the Talent Community" : "Sign In"}
+                </h2>
+                <button onClick={() => { setShowTalentModal(false); setTalentView("create"); }} className="text-[#18344C]/40 hover:text-[#18344C] transition-colors cursor-pointer">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+              </div>
+
+              {talentView === "create" ? (
+                <>
+                  <p className="text-[#18344C]/60 text-sm leading-relaxed mb-6">
+                    We invite you to stay connected with us to learn about opportunities by joining our Talent Community below.
+                  </p>
+                  <p className="text-xs font-semibold text-[#6FAEDF] uppercase tracking-wider mb-4">Account Creation Details</p>
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="text-xs font-semibold text-[#18344C]/70 mb-1.5 block">Legal First Name <span className="text-red-500">*</span></label>
+                        <input type="text" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
+                      </div>
+                      <div>
+                        <label className="text-xs font-semibold text-[#18344C]/70 mb-1.5 block">Legal Last Name <span className="text-red-500">*</span></label>
+                        <input type="text" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-[#18344C]/70 mb-1.5 block">Email Address <span className="text-red-500">*</span></label>
+                      <input type="email" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-[#18344C]/70 mb-1.5 block">Confirm Email <span className="text-red-500">*</span></label>
+                      <input type="email" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-[#18344C]/70 mb-1.5 block">Password <span className="text-red-500">*</span></label>
+                      <input type="password" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-[#18344C]/70 mb-1.5 block">Confirm Password <span className="text-red-500">*</span></label>
+                      <input type="password" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-[#18344C]/70 mb-1.5 block">Primary Phone Number</label>
+                      <input type="tel" placeholder="xxx xxx xxxx" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] placeholder-[#C5CCD5] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
+                    </div>
+                  </div>
+                  <p className="text-sm text-[#18344C]/50 mt-5 text-center">
+                    Already have an account?{" "}
+                    <button onClick={() => setTalentView("signin")} className="text-[#6FAEDF] font-semibold hover:text-[#004D6D] transition-colors cursor-pointer">Sign In</button>
+                  </p>
+                  <div className="flex items-center justify-between mt-6 pt-5 border-t border-[#C5CCD5]/30">
+                    <button onClick={() => { setShowTalentModal(false); setTalentView("create"); }} className="px-6 py-2.5 text-sm font-semibold text-[#18344C]/60 hover:text-[#18344C] rounded-lg hover:bg-[#f5f6f8] transition-all cursor-pointer" style={{ fontFamily: buttonFont }}>Cancel</button>
+                    <button className="px-6 py-2.5 text-sm font-semibold bg-[#004D6D] text-white rounded-lg hover:bg-[#18344C] transition-colors cursor-pointer shadow-md" style={{ fontFamily: buttonFont }}>Next</button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="space-y-4 mt-6">
+                    <div>
+                      <label className="text-xs font-semibold text-[#18344C]/70 mb-1.5 block">Email Address <span className="text-red-500">*</span></label>
+                      <input type="email" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-[#18344C]/70 mb-1.5 block">Password <span className="text-red-500">*</span></label>
+                      <input type="password" className="w-full px-3 py-2.5 border border-[#C5CCD5] rounded-lg text-sm text-[#18344C] focus:outline-none focus:border-[#6FAEDF] focus:ring-2 focus:ring-[#6FAEDF]/20 transition-all" />
+                    </div>
+                  </div>
+                  <div className="mt-6 space-y-2 text-center">
+                    <p className="text-sm text-[#18344C]/50">
+                      Don&apos;t have an account yet?{" "}
+                      <button onClick={() => setTalentView("create")} className="text-[#6FAEDF] font-semibold hover:text-[#004D6D] transition-colors cursor-pointer">Create Account</button>
+                    </p>
+                    <p>
+                      <button className="text-sm text-[#6FAEDF] font-semibold hover:text-[#004D6D] transition-colors cursor-pointer">Forgot your password?</button>
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between mt-6 pt-5 border-t border-[#C5CCD5]/30">
+                    <button onClick={() => { setShowTalentModal(false); setTalentView("create"); }} className="px-6 py-2.5 text-sm font-semibold text-[#18344C]/60 hover:text-[#18344C] rounded-lg hover:bg-[#f5f6f8] transition-all cursor-pointer" style={{ fontFamily: buttonFont }}>Cancel</button>
+                    <button className="px-6 py-2.5 text-sm font-semibold bg-[#004D6D] text-white rounded-lg hover:bg-[#18344C] transition-colors cursor-pointer shadow-md" style={{ fontFamily: buttonFont }}>Sign In</button>
                   </div>
                 </>
               )}
