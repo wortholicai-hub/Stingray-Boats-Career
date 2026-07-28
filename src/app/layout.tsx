@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
-import { Exo_2, Exo, Barlow } from "next/font/google";
+import localFont from "next/font/local";
+import { Barlow } from "next/font/google";
 import PageLoader from "./components/PageLoader";
 import "./globals.css";
 
-const exo2 = Exo_2({
-  subsets: ["latin"],
-  variable: "--font-exo2",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const exo = Exo({
-  subsets: ["latin"],
-  variable: "--font-exo",
-  weight: ["300", "400", "500", "600", "700"],
+const eurostile = localFont({
+  src: [
+    {
+      path: "../../public/font/eurostile/eurostile-normal.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/eurostile/eurostile-bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-eurostile",
+  display: "swap",
 });
 
 const barlow = Barlow({
@@ -35,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased ${exo2.variable} ${exo.variable} ${barlow.variable}`}
+      className={`h-full antialiased ${eurostile.variable} ${barlow.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">

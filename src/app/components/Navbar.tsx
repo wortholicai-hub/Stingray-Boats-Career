@@ -128,7 +128,7 @@ export default function Navbar() {
                   <a
                     href={item.href}
                     className="px-3 py-2 text-[13px] font-semibold text-white/80 hover:text-white tracking-wide uppercase transition-colors"
-                    style={{ fontFamily: "var(--font-exo2), Arial, sans-serif" }}
+                    style={{ fontFamily: "var(--font-eurostile), Arial, sans-serif" }}
                   >
                     {item.label}
                   </a>

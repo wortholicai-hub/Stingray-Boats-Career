@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const headingFont = "var(--font-exo2), Arial Black, sans-serif";
+const headingFont = "var(--font-eurostile), Arial Black, sans-serif";
 const buttonFont = "var(--font-barlow), Arial, sans-serif";
 
 const jobs = [

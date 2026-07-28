@@ -82,7 +82,7 @@ export default function Footer() {
           <div>
             <h3
               className="text-white font-bold text-sm tracking-[0.15em] uppercase mb-4 pb-3 border-b border-white/20"
-              style={{ fontFamily: "var(--font-exo2), Arial Black, sans-serif" }}
+              style={{ fontFamily: "var(--font-eurostile), Arial Black, sans-serif" }}
             >
               Quick Links
             </h3>
@@ -113,7 +113,7 @@ export default function Footer() {
           <div>
             <h3
               className="text-white font-bold text-sm tracking-[0.15em] uppercase mb-4 pb-3 border-b border-white/20"
-              style={{ fontFamily: "var(--font-exo2), Arial Black, sans-serif" }}
+              style={{ fontFamily: "var(--font-eurostile), Arial Black, sans-serif" }}
             >
               Contact Us
             </h3>
