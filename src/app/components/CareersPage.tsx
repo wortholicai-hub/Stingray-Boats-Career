@@ -107,7 +107,7 @@ const benefitsTiles = [
   {
     title: "4-Day Work Weeks",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
@@ -117,7 +117,7 @@ const benefitsTiles = [
   {
     title: "401K Retirement",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
@@ -127,7 +127,7 @@ const benefitsTiles = [
   {
     title: "Career Progression",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
     ),
@@ -137,7 +137,7 @@ const benefitsTiles = [
   {
     title: "Medical Insurance",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
@@ -147,7 +147,7 @@ const benefitsTiles = [
   {
     title: "Dental & Vision",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
       </svg>
@@ -158,7 +158,7 @@ const benefitsTiles = [
   {
     title: "Paid Vacation & Holidays",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
@@ -168,7 +168,7 @@ const benefitsTiles = [
   {
     title: "Life Insurance",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
@@ -178,7 +178,7 @@ const benefitsTiles = [
   {
     title: "Disability Coverage",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
@@ -359,10 +359,10 @@ export default function CareersPage() {
           >
             CAREERS
           </motion.h1>
-          <motion.p variants={fadeInUp} className="text-xl sm:text-2xl md:text-3xl text-[#C5CCD5] mb-3 font-light">
+          <motion.p variants={fadeInUp} className="text-2xl sm:text-3xl md:text-4xl text-white mb-3 font-bold">
             Employment at Stingray
           </motion.p>
-          <motion.p variants={fadeInUp} className="text-white/80 text-base md:text-lg max-w-lg mx-auto mb-12">
+          <motion.p variants={fadeInUp} className="text-white/90 text-lg md:text-xl max-w-lg mx-auto mb-12 font-bold">
             Legendary Performance, Unsurpassed Since 1979
           </motion.p>
           <motion.div variants={fadeInUp}>
@@ -390,7 +390,7 @@ export default function CareersPage() {
       {/* ===== ABOUT SECTION ===== */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left: Text + Tags */}
             <motion.div
               initial="hidden"
@@ -399,31 +399,31 @@ export default function CareersPage() {
               variants={staggerContainer}
             >
               <motion.div variants={fadeInUp} className="mb-2">
-                <span className="text-[#6FAEDF] text-sm font-semibold tracking-[0.2em] uppercase">
+                <span className="inline-block px-5 py-2.5 rounded-full bg-[#6FAEDF]/10 text-[#004D6D] text-sm tracking-[0.25em] uppercase font-bold border border-[#6FAEDF]/20">
                   About Us
                 </span>
               </motion.div>
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl md:text-4xl text-[#18344C] mb-8 tracking-tight uppercase font-black"
+                className="text-4xl md:text-5xl text-[#18344C] mb-8 tracking-tight uppercase font-black"
                 style={{ fontFamily: headingFont }}
               >
                 Building Top Quality
                 <br />
                 Powerboats
               </motion.h2>
-              <motion.p variants={fadeInUp} className="text-[#18344C]/70 text-lg leading-relaxed mb-6">
+              <motion.p variants={fadeInUp} className="text-[#18344C] text-xl leading-relaxed mb-6 font-bold">
                 Located in Hartsville, SC, Stingray is a family oriented company
                 committed to building top quality powerboats. Since its beginning
                 in 1979, Stingray has emerged as one of the leading independent
                 boat builders in the nation.
               </motion.p>
-              <motion.p variants={fadeInUp} className="text-[#18344C]/70 text-lg leading-relaxed mb-6">
+              <motion.p variants={fadeInUp} className="text-[#18344C] text-xl leading-relaxed mb-6 font-bold">
                 Our facilities consist of over 225,000 square feet of
                 manufacturing space and is one of the most technologically
                 advanced facilities in the country.
               </motion.p>
-              <motion.p variants={fadeInUp} className="text-[#18344C]/70 text-lg leading-relaxed mb-8">
+              <motion.p variants={fadeInUp} className="text-[#18344C] text-xl leading-relaxed mb-8 font-bold">
                 Our positions offer competitive wage and benefit programs
                 including medical, dental, vision, holidays, vacation, 401k,
                 plus optional disability and life insurance.
@@ -434,7 +434,7 @@ export default function CareersPage() {
                 {aboutTags.map((tag) => (
                   <span
                     key={tag.label}
-                    className={`inline-flex items-center px-6 py-3 rounded-full text-sm font-bold tracking-wide cursor-default shadow-md hover:scale-105 hover:-translate-y-1 transition-all duration-200 ${
+                    className={`inline-flex items-center px-7 py-3.5 rounded-full text-base font-bold tracking-wide cursor-default shadow-md hover:scale-105 hover:-translate-y-1 transition-all duration-200 ${
                       tag.accent
                         ? "bg-gradient-to-r from-[#004D6D] to-[#18344C] text-white hover:shadow-[0_10px_30px_rgba(0,77,109,0.35)]"
                         : "bg-white text-[#18344C] border border-[#C5CCD5]/40 hover:shadow-[0_10px_30px_rgba(24,52,76,0.15)]"
@@ -453,6 +453,7 @@ export default function CareersPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
+              className="lg:pt-[155px]"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{ aspectRatio: "3/2" }}>
                 <AnimatePresence mode="popLayout" custom={aboutDir} initial={false}>
@@ -504,6 +505,26 @@ export default function CareersPage() {
                   </div>
                 </div>
               </div>
+
+              {/* Navigation Dots */}
+              <div className="flex items-center justify-center gap-2.5 mt-6">
+                {aboutImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setAboutDir(index > mod(aboutIdx, aboutImages.length) ? 1 : -1);
+                      setAboutIdx(index);
+                      startAutoAdvance();
+                    }}
+                    className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                      mod(aboutIdx, aboutImages.length) === index
+                        ? "bg-[#004D6D] w-8"
+                        : "bg-[#C5CCD5]/40 w-2 hover:bg-[#C5CCD5]"
+                    }`}
+                    aria-label={`View image ${index + 1}`}
+                  />
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>
@@ -525,16 +546,16 @@ export default function CareersPage() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <span className="text-[#6FAEDF] text-sm font-semibold tracking-[0.2em] uppercase">
+            <span className="inline-block px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-[#6FAEDF] text-sm tracking-[0.25em] uppercase font-bold border border-white/20">
               Why Stingray
             </span>
             <h2
-              className="text-3xl md:text-4xl text-white mt-2 tracking-tight uppercase font-black"
+              className="text-4xl md:text-5xl text-white mt-4 tracking-tight uppercase font-black"
               style={{ fontFamily: headingFont }}
             >
               Benefits & Perks
             </h2>
-            <p className="text-[#C5CCD5]/60 mt-3 max-w-2xl mx-auto">
+            <p className="text-white mt-4 max-w-2xl mx-auto font-bold text-lg">
               At Stingray, we invest in our people. From 4-day work weeks to comprehensive
               benefits, here&apos;s what makes working here exceptional.
             </p>
@@ -553,16 +574,18 @@ export default function CareersPage() {
                 variants={scaleIn}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group"
               >
-                <div className="w-14 h-14 bg-[#6FAEDF]/15 rounded-xl flex items-center justify-center mb-5 text-[#6FAEDF] group-hover:bg-[#6FAEDF]/25 group-hover:scale-110 transition-all duration-300">
-                  {benefit.icon}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-[#6FAEDF]/15 rounded-lg flex items-center justify-center text-[#6FAEDF] flex-shrink-0 group-hover:bg-[#6FAEDF]/25 group-hover:scale-110 transition-all duration-300">
+                    {benefit.icon}
+                  </div>
+                  <h3
+                    className="text-lg text-white font-bold uppercase tracking-wide"
+                    style={{ fontFamily: headingFont }}
+                  >
+                    {benefit.title}
+                  </h3>
                 </div>
-                <h3
-                  className="text-lg text-white font-bold mb-3 uppercase tracking-wide"
-                  style={{ fontFamily: headingFont }}
-                >
-                  {benefit.title}
-                </h3>
-                <p className="text-[#C5CCD5]/60 text-sm leading-relaxed">
+                <p className="text-white text-base leading-relaxed font-bold">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -587,16 +610,16 @@ export default function CareersPage() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <span className="text-[#6FAEDF] text-sm font-semibold tracking-[0.2em] uppercase">
+            <span className="inline-block px-5 py-2.5 rounded-full bg-[#6FAEDF]/10 text-[#004D6D] text-sm tracking-[0.25em] uppercase font-bold border border-[#6FAEDF]/20">
               Now Hiring
             </span>
             <h2
-              className="text-3xl md:text-4xl text-[#18344C] mt-2 tracking-tight uppercase font-black"
+              className="text-4xl md:text-5xl text-[#18344C] mt-4 tracking-tight uppercase font-black"
               style={{ fontFamily: headingFont }}
             >
               Open Positions
             </h2>
-            <p className="text-[#18344C]/50 mt-3 max-w-xl mx-auto">
+            <p className="text-[#18344C] mt-4 max-w-xl mx-auto font-bold text-lg">
               Join the Stingray family. Browse our current openings and find the role
               that&apos;s right for you.
             </p>
@@ -613,30 +636,30 @@ export default function CareersPage() {
               <motion.div
                 key={job.title}
                 variants={fadeInUp}
-                className="bg-white border border-[#C5CCD5]/30 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                className="bg-white border border-[#C5CCD5]/30 rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
               >
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex items-start justify-between mb-5">
                   <div>
                     <h3
-                      className="text-xl text-[#18344C] font-bold"
+                      className="text-2xl text-[#18344C] font-bold"
                       style={{ fontFamily: headingFont }}
                     >
                       {job.title}
                     </h3>
-                    <p className="text-[#004D6D] text-sm font-semibold mt-1">
+                    <p className="text-[#004D6D] text-base font-bold mt-1">
                       {job.department}
                     </p>
                   </div>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#6FAEDF]/10 text-[#004D6D] text-xs font-bold uppercase tracking-wider flex-shrink-0">
+                  <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#6FAEDF]/10 text-[#004D6D] text-sm font-bold uppercase tracking-wider flex-shrink-0">
                     {job.type}
                   </span>
                 </div>
-                <p className="text-[#18344C]/60 text-sm leading-relaxed mb-5">
+                <p className="text-[#18344C] text-base leading-relaxed mb-6 font-bold">
                   {job.description}
                 </p>
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 text-[#18344C]/40 text-xs">
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center gap-2 text-[#18344C]/70 text-base font-bold">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -644,11 +667,11 @@ export default function CareersPage() {
                   </div>
                   <Link
                     href="/openings"
-                    className="inline-flex items-center gap-1.5 text-[#004D6D] text-sm font-semibold group-hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center gap-1.5 text-[#004D6D] text-base font-bold group-hover:gap-3 transition-all duration-300"
                     style={{ fontFamily: buttonFont }}
                   >
                     View Details
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
@@ -691,17 +714,17 @@ export default function CareersPage() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <span className="text-[#6FAEDF] text-sm font-semibold tracking-[0.2em] uppercase">
+            <span className="inline-block px-5 py-2.5 rounded-full bg-[#6FAEDF]/10 text-[#004D6D] text-sm tracking-[0.25em] uppercase font-bold border border-[#6FAEDF]/20">
               Our People
             </span>
             <h2
-              className="text-3xl md:text-4xl text-[#18344C] mt-2 tracking-tight uppercase font-black"
+              className="text-4xl md:text-5xl text-[#18344C] mt-4 tracking-tight uppercase font-black"
               style={{ fontFamily: headingFont }}
             >
               Employee Testimonials
             </h2>
-            <p className="text-[#18344C]/50 mt-3 max-w-xl mx-auto">
-              Hear from the people who make Stingray great — across manufacturing,
+            <p className="text-[#18344C] mt-4 max-w-xl mx-auto font-bold text-lg">
+              Hear from the people who make Stingray great across manufacturing,
               engineering, and office roles.
             </p>
           </motion.div>
@@ -722,7 +745,7 @@ export default function CareersPage() {
                   &ldquo;
                 </div>
                 <div className="relative z-10">
-                  <p className="text-[#18344C]/80 text-lg md:text-xl leading-relaxed mb-8 italic">
+                  <p className="text-[#18344C] text-xl md:text-2xl leading-relaxed mb-8 italic font-bold">
                     &ldquo;{testimonials[testimonialIdx].quote}&rdquo;
                   </p>
                   <div className="flex items-center gap-4">
@@ -730,13 +753,13 @@ export default function CareersPage() {
                       {testimonials[testimonialIdx].name.charAt(0)}
                     </div>
                     <div>
-                      <div className="text-[#18344C] font-bold" style={{ fontFamily: headingFont }}>
+                      <div className="text-[#18344C] font-bold text-lg" style={{ fontFamily: headingFont }}>
                         {testimonials[testimonialIdx].name}
                       </div>
-                      <div className="text-[#004D6D] text-sm font-semibold">
+                      <div className="text-[#004D6D] text-base font-bold">
                         {testimonials[testimonialIdx].role}
                       </div>
-                      <div className="text-[#18344C]/40 text-xs">
+                      <div className="text-[#18344C]/70 text-base font-bold">
                         {testimonials[testimonialIdx].department} &middot; {testimonials[testimonialIdx].years}
                       </div>
                     </div>
@@ -773,7 +796,7 @@ export default function CareersPage() {
             {["Manufacturing", "Engineering", "Office"].map((dept) => (
               <span
                 key={dept}
-                className="inline-flex items-center px-5 py-2.5 rounded-full bg-white text-[#18344C] text-sm font-semibold shadow-sm border border-[#C5CCD5]/20"
+                className="inline-flex items-center px-6 py-3 rounded-full bg-white text-[#18344C] text-base font-bold shadow-sm border border-[#C5CCD5]/20"
                 style={{ fontFamily: buttonFont }}
               >
                 {dept}
@@ -799,16 +822,16 @@ export default function CareersPage() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <span className="text-[#6FAEDF] text-sm font-semibold tracking-[0.2em] uppercase">
+            <span className="inline-block px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-[#6FAEDF] text-sm tracking-[0.25em] uppercase font-bold border border-white/20">
               Life at Stingray
             </span>
             <h2
-              className="text-3xl md:text-4xl text-white mt-2 tracking-tight uppercase font-black"
+              className="text-4xl md:text-5xl text-white mt-4 tracking-tight uppercase font-black"
               style={{ fontFamily: headingFont }}
             >
               Our Culture
             </h2>
-            <p className="text-[#C5CCD5]/60 mt-3 max-w-xl mx-auto">
+            <p className="text-white mt-4 max-w-xl mx-auto font-bold text-lg">
               At Stingray, we&apos;re more than just a team. We&apos;re a
               family dedicated to craftsmanship and excellence.
             </p>
@@ -905,16 +928,16 @@ export default function CareersPage() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <span className="text-[#6FAEDF] text-sm font-semibold tracking-[0.2em] uppercase">
+            <span className="inline-block px-5 py-2.5 rounded-full bg-[#6FAEDF]/10 text-[#004D6D] text-sm tracking-[0.25em] uppercase font-bold border border-[#6FAEDF]/20">
               Explore More
             </span>
             <h2
-              className="text-3xl md:text-4xl text-[#18344C] mt-2 tracking-tight uppercase font-black"
+              className="text-4xl md:text-5xl text-[#18344C] mt-4 tracking-tight uppercase font-black"
               style={{ fontFamily: headingFont }}
             >
               Stingray Boats
             </h2>
-            <p className="text-[#18344C]/50 mt-3 max-w-md mx-auto text-sm">
+            <p className="text-[#18344C] mt-4 max-w-md mx-auto text-lg font-bold">
               Discover everything Stingray has to offer
             </p>
           </motion.div>
@@ -949,22 +972,22 @@ export default function CareersPage() {
               <motion.button
                 key={cta.bottom}
                 variants={scaleIn}
-                className="group relative bg-gradient-to-br from-[#18344C] to-[#004D6D] rounded-2xl p-8 text-center cursor-pointer overflow-hidden border-0 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#18344C]/30 transition-all duration-300"
+                className="group relative bg-gradient-to-br from-[#18344C] to-[#004D6D] rounded-2xl p-10 text-center cursor-pointer overflow-hidden border-0 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#18344C]/30 transition-all duration-300"
               >
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-[#6FAEDF]/15 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:bg-[#6FAEDF]/25 group-hover:scale-110 transition-all duration-300">
-                    <svg className="w-7 h-7 text-[#6FAEDF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-16 h-16 bg-[#6FAEDF]/15 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#6FAEDF]/25 group-hover:scale-110 transition-all duration-300">
+                    <svg className="w-8 h-8 text-[#6FAEDF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={cta.icon} />
                     </svg>
                   </div>
-                  <div className="text-[#C5CCD5]/70 text-xs tracking-widest uppercase mb-1" style={{ fontFamily: buttonFont }}>{cta.top}</div>
-                  <div className="text-white text-2xl tracking-wide font-black mb-3" style={{ fontFamily: headingFont }}>
+                  <div className="text-white text-base tracking-widest uppercase mb-1 font-bold" style={{ fontFamily: buttonFont }}>{cta.top}</div>
+                  <div className="text-white text-3xl tracking-wide font-black mb-4" style={{ fontFamily: headingFont }}>
                     {cta.bottom}
                   </div>
-                  <p className="text-[#C5CCD5]/40 text-xs leading-relaxed mb-4 max-w-[200px] mx-auto">{cta.desc}</p>
-                  <div className="inline-flex items-center gap-1.5 text-[#6FAEDF] text-sm font-semibold group-hover:gap-3 transition-all duration-300" style={{ fontFamily: buttonFont }}>
+                  <p className="text-white/80 text-base leading-relaxed mb-5 max-w-[220px] mx-auto font-bold">{cta.desc}</p>
+                  <div className="inline-flex items-center gap-1.5 text-[#6FAEDF] text-base font-bold group-hover:gap-3 transition-all duration-300" style={{ fontFamily: buttonFont }}>
                     <span>Learn More</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>

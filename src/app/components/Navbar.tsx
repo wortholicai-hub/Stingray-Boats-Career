@@ -107,7 +107,7 @@ export default function Navbar() {
                         openDropdown === item.label ? null : item.label,
                       )
                     }
-                    className="flex items-center gap-1 px-3 py-2 text-[13px] font-semibold text-white/80 hover:text-white tracking-wide uppercase transition-colors cursor-pointer"
+                    className="flex items-center gap-1 px-3 py-2 text-sm font-bold text-white hover:text-[#6FAEDF] tracking-wide uppercase transition-colors cursor-pointer"
                   >
                     {item.label}
                     <svg
@@ -127,7 +127,7 @@ export default function Navbar() {
                 ) : (
                   <a
                     href={item.href}
-                    className="px-3 py-2 text-[13px] font-semibold text-white/80 hover:text-white tracking-wide uppercase transition-colors"
+                    className="px-3 py-2 text-sm font-bold text-white hover:text-[#6FAEDF] tracking-wide uppercase transition-colors"
                     style={{ fontFamily: "var(--font-eurostile), Arial, sans-serif" }}
                   >
                     {item.label}
@@ -149,7 +149,7 @@ export default function Navbar() {
                             ? "noopener noreferrer"
                             : undefined
                         }
-                        className="block px-4 py-2.5 text-sm text-[#18344C] hover:bg-[#6FAEDF]/10 hover:text-[#004D6D] transition-colors"
+                        className="block px-4 py-2.5 text-sm font-bold text-[#18344C] hover:bg-[#6FAEDF]/10 hover:text-[#004D6D] transition-colors"
                       >
                         {child.label}
                       </a>
@@ -212,7 +212,7 @@ export default function Navbar() {
                         openDropdown === item.label ? null : item.label,
                       )
                     }
-                    className="w-full flex items-center justify-between py-3 text-sm font-semibold text-white/80 hover:text-white uppercase tracking-wide cursor-pointer"
+                    className="w-full flex items-center justify-between py-3 text-sm font-bold text-white hover:text-[#6FAEDF] uppercase tracking-wide cursor-pointer"
                   >
                     {item.label}
                     <svg
@@ -235,7 +235,7 @@ export default function Navbar() {
                         <a
                           key={child.label}
                           href={child.href}
-                          className="block py-2 text-sm text-[#6FAEDF]/80 hover:text-[#6FAEDF]"
+                          className="block py-2 text-sm font-bold text-[#6FAEDF] hover:text-white"
                         >
                           {child.label}
                         </a>
@@ -246,7 +246,7 @@ export default function Navbar() {
               ) : (
                 <a
                   href={item.href}
-                  className="block py-3 text-sm font-semibold text-white/80 hover:text-white uppercase tracking-wide"
+                  className="block py-3 text-sm font-bold text-white hover:text-[#6FAEDF] uppercase tracking-wide"
                 >
                   {item.label}
                 </a>
